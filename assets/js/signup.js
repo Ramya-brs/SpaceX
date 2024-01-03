@@ -9,7 +9,9 @@ const maxLength = 250;
 const warnLength = 10;
 const charCount = document.getElementById("charCount");
 charCount.textContent = `${maxLength}/${maxLength}`;
-
+function scrollElementIntoView(input){
+  input.scrollIntoView({ behavior: "smooth", block: "center" });
+}
 function validateForm(e) {
   e.preventDefault();
   const inputs = [...formElement.querySelectorAll("input, textarea")];
